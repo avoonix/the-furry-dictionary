@@ -35,6 +35,6 @@
 </script>
 
 <svelte:head>
-	<Meta title={variables.siteName} {url} {description} />
 	{@html schema}
 </svelte:head>
+<Meta title={variables.siteName} {url} {description} />

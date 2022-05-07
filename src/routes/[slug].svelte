@@ -25,6 +25,8 @@
 	import DefinitionHead from '$lib/components/DefinitionHead.svelte';
 	import DefinitionHero from '$lib/components/DefinitionHero.svelte';
 	import type { SvelteComponent } from 'svelte';
+	import { browser } from '$app/env';
+	import Comments from '$lib/components/Comments.svelte';
 
 	export let body: SvelteComponent;
 	export let definition: Page;
@@ -48,4 +50,10 @@
 	<div class="mt-24" />
 	<SectionHeader>Browse the dictionary</SectionHeader>
 	<BrowseByLetter />
+
+	{#if browser}
+		{#key definition.slug}
+			<Comments />
+		{/key}
+	{/if}
 </div>

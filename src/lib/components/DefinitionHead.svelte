@@ -48,6 +48,6 @@
 </script>
 
 <svelte:head>
-	<Meta title={name} {url} {description} />
 	{@html schema}
 </svelte:head>
+<Meta title={name} {url} {description} />
