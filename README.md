@@ -1,5 +1,7 @@
 # The Furry Dictionary
 
+[![Landing Page](./static/landing.png)](https://the-furry-dictionary.avoonix.com/)
+
 ## Thanks
 
 - https://github.com/mattjennings/sveltekit-blog-template
