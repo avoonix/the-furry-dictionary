@@ -2,3 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-container {
+	@apply container mx-auto py-8 px-4 md:py-16 md:px-8 lg:px-32;
+}
+
+.center-icon {
+	@apply inline-flex items-center align-middle justify-center;
+}
+
+.round-button {
+	@apply rounded-full border border-slate-900 dark:border-slate-100 text-slate-900 dark:text-slate-100 leading-normal uppercase hover:bg-slate-900 dark:hover:bg-slate-100 hover:text-slate-100 dark:hover:text-slate-900 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2;
+}
+
+.round-button.active {
+	@apply border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-slate-100;
+}

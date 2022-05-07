@@ -1,5 +1,6 @@
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
+	content: ['./src/**/*.{html,js,svelte,ts,md}'],
 
 	theme: {
 		extend: {}
@@ -7,6 +8,7 @@ const config = {
 
 	plugins: [
 		require('@tailwindcss/typography'),
+		require('@tailwindcss/forms'),
 	]
 };
 

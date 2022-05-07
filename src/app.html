@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth bg-gray-900">
 	<head>
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; img-src 'self'; style-src 'unsafe-eval' 'unsafe-inline' 'self'"
+		/>
+		<link rel="sitemap" href="/sitemap.xml" type="application/xml" />
 		<meta charset="utf-8" />
 		<link rel="icon" href="%svelte.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
+		<script>
+			const themeVariant = localStorage.getItem('themeVariant');
+			const prefersLight = Boolean(
+				themeVariant === 'light' ||
+					(!themeVariant && window?.matchMedia('(prefers-color-scheme: light)').matches)
+			);
+
+			if (prefersLight) {
+				document.querySelector('html').classList.remove('dark', 'bg-gray-900');
+			}
+		</script>
 	</head>
 	<body>
-		<div>%svelte.body%</div>
+		<div class="min-h-screen text-slate-900 dark:text-gray-100">%svelte.body%</div>
 	</body>
 </html>

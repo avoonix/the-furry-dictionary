@@ -8,3 +8,8 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+interface ImportMetaEnv {
+	VITE_PUBLIC_BASE_PATH: string;
+	VITE_SITE_NAME: string;
+}
