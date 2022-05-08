@@ -1,5 +1,7 @@
 # The Furry Dictionary
 
+https://the-furry-dictionary.avoonix.com/
+
 [![Landing Page](./static/landing.png)](https://the-furry-dictionary.avoonix.com/)
 
 ## Thanks
