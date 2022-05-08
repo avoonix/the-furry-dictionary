@@ -6,3 +6,4 @@
 ## Related Terms
 
 - [UwU](/UwU)
+- [toe beans](/toe%20beans)
