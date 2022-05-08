@@ -60,7 +60,11 @@
 		class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
 		on:click={() => {
 			disableComments = !disableComments;
-			localStorage.setItem('disableComments', 'true');
+			if (disableComments) {
+				localStorage.setItem('disableComments', 'true');
+			} else {
+				localStorage.removeItem('disableComments');
+			}
 		}}
 	>
 		<svg class="text-slate-500" style="width:24px;height:24px" viewBox="0 0 24 24">
