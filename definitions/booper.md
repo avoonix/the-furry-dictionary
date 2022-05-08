@@ -5,3 +5,4 @@ nose, snout
 ## Related Terms
 
 - [boop](/boop)
+- [snoot](/snoot)
