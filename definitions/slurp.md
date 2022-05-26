@@ -1,3 +1,3 @@
 ## Definition of slurp
 
-a very wet [lick](/lick)
+a very wet [lick](./lick)

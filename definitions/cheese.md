@@ -1,3 +1,3 @@
 ## Definition of cheese
 
-name given to [sergals](/sergal)
+name given to [sergals](./sergal)

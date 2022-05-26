@@ -1,3 +1,3 @@
 ## Definition of sona
 
-shorthand for [fursona](/fursona)
+shorthand for [fursona](./fursona)

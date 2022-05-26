@@ -4,4 +4,4 @@ masturbating
 
 ## Related Terms
 
-- [pawing](/pawing)
+- [pawing](./pawing)

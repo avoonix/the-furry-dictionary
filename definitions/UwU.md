@@ -9,12 +9,12 @@ expression when someone is happy or saw something cute
 ## Synonyms and similar Words
 
 - uwu - lowercase version
-- UvU - [birb](/birb) version
+- UvU - [birb](./birb) version
 - Unicode versions
   - (′ꈍωꈍ‵)
   - (=UܫU=)∫
 
 ## Related Terms
 
-- [OwO](/OwO)
-- [TwT](/TwT)
+- [OwO](./OwO)
+- [TwT](./TwT)

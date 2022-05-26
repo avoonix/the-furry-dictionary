@@ -4,4 +4,4 @@ furry + persona; the character used to interact with other memebers of the fando
 
 ## Synonyms and similar Words
 
-- [sona](/sona)
+- [sona](./sona)

@@ -8,9 +8,9 @@
 		<meta name="theme-color" content="#3B82F6">
 		<link rel="sitemap" href="/sitemap.xml" type="application/xml" />
 		<meta charset="utf-8" />
-		<link rel="icon" href="%svelte.assets%/favicon.png" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%svelte.head%
+		%sveltekit.head%
 		<script>
 			const themeVariant = localStorage.getItem('themeVariant');
 			const prefersLight = Boolean(
@@ -24,6 +24,6 @@
 		</script>
 	</head>
 	<body>
-		<div class="min-h-screen text-slate-900 dark:text-gray-100">%svelte.body%</div>
+		<div class="min-h-screen text-slate-900 dark:text-gray-100">%sveltekit.body%</div>
 	</body>
 </html>

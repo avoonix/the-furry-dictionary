@@ -9,7 +9,7 @@
 
 	const websiteId = canonicalUrl('#website');
 	$: url = canonicalUrl(definition.slug);
-	$: description = `Definition of '${definition.slug}' by ${variables.siteName}: ${definition.preview.text}...`;
+	$: description = `Definition of '${definition.slug}' by ${variables.siteName}`;
 	$: name = `${definition.slug} Definition`;
 
 	$: schema = jsonLd<DefinedTerm | DefinedTermSet | WebPage | WebSite>([

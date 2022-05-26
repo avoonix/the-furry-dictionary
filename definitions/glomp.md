@@ -4,4 +4,4 @@ Playfuly tackle and then hug someone
 
 ## Related Terms
 
-- [pounce](/pounce)
+- [pounce](./pounce)

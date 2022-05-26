@@ -9,7 +9,7 @@ expression when someone finds something interesting or arousing
 ## Synonyms and similar Words
 
 * owo - lowercase version
-* OvO - [birb](/birb) version
+* OvO - [birb](./birb) version
 
 ## Phrases containing OwO
 
@@ -17,5 +17,5 @@ expression when someone finds something interesting or arousing
 
 ## Related Terms
 
-- [UwU](/UwU)
-- [TwT](/TwT)
+- [UwU](./UwU)
+- [TwT](./TwT)

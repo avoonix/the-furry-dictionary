@@ -5,4 +5,4 @@
 
 ## Related Terms
 
-- [pawing off](/pawing%20off)
+- [pawing off](./pawing%20off)

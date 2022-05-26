@@ -4,4 +4,4 @@ small real-life gathering
 
 ## Related Terms
 
-- [convention](/convention)
+- [convention](./convention)

@@ -1,3 +1,3 @@
 ## Definition of proto
 
-short name for [protogens](/protogen)
+short name for [protogens](./protogen)

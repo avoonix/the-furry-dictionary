@@ -4,9 +4,9 @@ crying face
 
 ## Synonyms and similar Words
 
-- TvT - [birb](/birb) version
+- TvT - [birb](./birb) version
 
 ## Related Terms
 
-- [OwO](/OwO)
-- [UwU](/UwU)
+- [OwO](./OwO)
+- [UwU](./UwU)

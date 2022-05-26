@@ -4,4 +4,4 @@ a tap on the nose
 
 ## Related Terms
 
-- [booper](/booper)
+- [booper](./booper)

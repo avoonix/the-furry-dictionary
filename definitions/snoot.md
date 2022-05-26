@@ -4,4 +4,4 @@ nose, snout
 
 ## Synonyms and similar Words
 
-- [booper](/booper)
+- [booper](./booper)

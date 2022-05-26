@@ -4,5 +4,5 @@ having sex
 
 ## Related Terms
 
-- [yiff](/yiff)
+- [yiff](./yiff)
 

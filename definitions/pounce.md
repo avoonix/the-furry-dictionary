@@ -4,4 +4,4 @@ Playfuly tackle someone
 
 ## Related Terms
 
-- [glomp](/glomp)
+- [glomp](./glomp)

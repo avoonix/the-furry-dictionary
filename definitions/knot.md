@@ -4,4 +4,4 @@ part of a canid penis that swells up before ejaculation
 
 ## Related Terms
 
-- [knotting](/knotting)
+- [knotting](./knotting)

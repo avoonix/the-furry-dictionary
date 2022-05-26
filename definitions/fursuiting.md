@@ -1,3 +1,3 @@
 ## Definition of fursuiting
 
-wearing a [fursuit](/fursuit)
+wearing a [fursuit](./fursuit)
