@@ -52,4 +52,4 @@
 <svelte:head>
 	{@html schema}
 </svelte:head>
-<Meta title={name} {url} {description} {image} />
+<Meta title={name} {url} {description} {image} largeImage />

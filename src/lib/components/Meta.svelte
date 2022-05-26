@@ -8,6 +8,7 @@
 	export let image: string | null = null;
 	const formattedTitle =
 		title && title !== variables.siteName ? `${title} | ${variables.siteName}` : variables.siteName;
+	export let largeImage = false;
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@
 	<meta property="og:description" content={description} />
 
 	<meta name="twitter:url" content={url} />
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content={largeImage ? "summary_large_image" : "summary"} />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	<!-- <meta name="twitter:site" content="@author" /> -->
