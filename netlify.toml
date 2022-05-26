@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "npx pnpm install --store=node_modules/.pnpm-store && npx pnpm build"
+  command = "npx pnpm install --store=node_modules/.pnpm-store && npx playwright install && npx pnpm build"
 [build.environment]
   NPM_FLAGS = "--version"
 [[redirects]]
