@@ -43,22 +43,24 @@
 			</div>
 		</div>
 	</h1>
-	<button
-		class="inline-block {success.term
-			? 'bg-green-500 hover:bg-green-700 focus:bg-green-700 active:bg-green-800'
-			: 'bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800'} px-7 py-3 mr-2 text-slate-100 font-medium text-sm leading-snug uppercase rounded shadow-md  hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
-		on:click={copyTerm}>Copy Term</button
-	>
-	<button
-		class="inline-block {success.link
-			? 'text-green-500 hover:text-green-700'
-			: 'text-blue-500 hover:text-blue-700'} px-7 py-3 bg-transparent font-medium text-sm leading-snug uppercase rounded hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-gray-100 dark:focus:bg-slate-900 focus:outline-none focus:ring-0 active:bg-gray-200 dark:active:bg-slate-700 transition duration-150 ease-in-out"
-		on:click={copyLink}>Copy Link</button
-	>
-	<a
-		class="inline-block text-blue-500 hover:text-blue-700 px-7 py-3 bg-transparent font-medium text-sm leading-snug uppercase rounded hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-gray-100 dark:focus:bg-slate-900 focus:outline-none focus:ring-0 active:bg-gray-200 dark:active:bg-slate-700 transition duration-150 ease-in-out"
-		href="https://github.com/avoonix/the-furry-dictionary/blob/master/definitions/{slug}.md"
-	>
-		Edit
-	</a>
+	<div class="term-buttons">
+		<button
+			class="inline-block {success.term
+				? 'bg-green-500 hover:bg-green-700 focus:bg-green-700 active:bg-green-800'
+				: 'bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800'} px-7 py-3 mr-2 text-slate-100 font-medium text-sm leading-snug uppercase rounded shadow-md  hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
+			on:click={copyTerm}>Copy Term</button
+		>
+		<button
+			class="inline-block {success.link
+				? 'text-green-500 hover:text-green-700'
+				: 'text-blue-500 hover:text-blue-700'} px-7 py-3 bg-transparent font-medium text-sm leading-snug uppercase rounded hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-gray-100 dark:focus:bg-slate-900 focus:outline-none focus:ring-0 active:bg-gray-200 dark:active:bg-slate-700 transition duration-150 ease-in-out"
+			on:click={copyLink}>Copy Link</button
+		>
+		<a
+			class="inline-block text-blue-500 hover:text-blue-700 px-7 py-3 bg-transparent font-medium text-sm leading-snug uppercase rounded hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-gray-100 dark:focus:bg-slate-900 focus:outline-none focus:ring-0 active:bg-gray-200 dark:active:bg-slate-700 transition duration-150 ease-in-out"
+			href="https://github.com/avoonix/the-furry-dictionary/blob/master/definitions/{slug}.md"
+		>
+			Edit
+		</a>
+	</div>
 </div>

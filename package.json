@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"build": "svelte-kit build && node scripts/screenshots",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync",
@@ -29,6 +29,7 @@
 		"eslint-plugin-svelte3": "^3.4.1",
 		"mdsvex": "^0.10.5",
 		"node-html-parser": "^5.3.3",
+		"playwright": "^1.22.2",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^3.1.4",
 		"prettier": "^2.6.2",

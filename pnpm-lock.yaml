@@ -16,6 +16,7 @@ specifiers:
   eslint-plugin-svelte3: ^3.4.1
   mdsvex: ^0.10.5
   node-html-parser: ^5.3.3
+  playwright: ^1.22.2
   postcss: ^8.4.14
   postcss-load-config: ^3.1.4
   prettier: ^2.6.2
@@ -46,6 +47,7 @@ devDependencies:
   eslint-plugin-svelte3: 3.4.1_6wevxxng4y4ff26nzlndg2wnpa
   mdsvex: 0.10.5_svelte@3.48.0
   node-html-parser: 5.3.3
+  playwright: 1.22.2
   postcss: 8.4.14
   postcss-load-config: 3.1.4_postcss@8.4.14
   prettier: 2.6.2
@@ -2117,6 +2119,15 @@ packages:
     resolution: {integrity: sha512-w/hc/Ld0RM4pmsNeE6aL/fPNWw8BWit2tg+TfqJ3+p59c6s3B6C8mXvXrIPmfQEobkcFDc+4KirNzOQ+uBSP1Q==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
+
+  /playwright/1.22.2:
+    resolution: {integrity: sha512-hUTpg7LytIl3/O4t0AQJS1V6hWsaSY5uZ7w1oCC8r3a1AQN5d6otIdCkiB3cbzgQkcMaRxisinjMFMVqZkybdQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.22.2
     dev: true
 
   /postcss-js/4.0.0_postcss@8.4.14:
