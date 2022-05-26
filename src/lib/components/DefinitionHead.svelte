@@ -11,6 +11,7 @@
 	$: url = canonicalUrl(definition.slug);
 	$: description = `Definition of '${definition.slug}' by ${variables.siteName}`;
 	$: name = `${definition.slug} Definition`;
+	$: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
 
 	$: schema = jsonLd<DefinedTerm | DefinedTermSet | WebPage | WebSite>([
 		{
@@ -18,6 +19,7 @@
 			'@type': 'WebPage',
 			name,
 			url,
+			image,
 			description,
 			isPartOf: {
 				'@id': websiteId
@@ -50,4 +52,4 @@
 <svelte:head>
 	{@html schema}
 </svelte:head>
-<Meta title={name} {url} {description} />
+<Meta title={name} {url} {description} {image} />

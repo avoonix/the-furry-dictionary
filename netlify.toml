@@ -7,3 +7,8 @@
   from = "/*"
   to = "/"
   status = 404
+ 
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
