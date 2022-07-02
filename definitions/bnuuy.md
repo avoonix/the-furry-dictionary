@@ -1,10 +1,10 @@
 ## Definition of bnuuy
 
-cute version of "bunny"
+cute version of *bunny*
 
 ## Notes
 
-also written as "bnnuy"
+also written as *bnnuy*
 
 ## Related Terms
 

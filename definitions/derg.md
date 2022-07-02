@@ -1,3 +1,3 @@
 ## Definition of derg
 
-cute version of "dragon"
+cute version of *dragon*

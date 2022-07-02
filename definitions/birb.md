@@ -1,3 +1,3 @@
 ## Definition of birb
 
-cute version of "bird"
+cute version of *bird*

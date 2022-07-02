@@ -1,6 +1,8 @@
 ## Definition of YPH
 
-stands for "your paw here"; standin for another character's paw(s) in stickers or other artwork
+your paw here
+
+standin for another character's paw(s) in stickers or other artwork
 
 ## Related Terms
 

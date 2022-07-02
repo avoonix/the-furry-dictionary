@@ -1,3 +1,3 @@
 ## Definition of yote
 
-shorthand for "coyote"
+shorthand for *coyote*
