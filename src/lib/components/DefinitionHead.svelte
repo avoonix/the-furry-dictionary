@@ -4,13 +4,14 @@
 	import Meta from './Meta.svelte';
 	import type { Page } from '$lib/definitions';
 	import { variables } from '$lib/variables';
+	import { titleCase } from 'title-case';
 
 	export let definition: Page;
 
 	const websiteId = canonicalUrl('#website');
 	$: url = canonicalUrl(definition.slug);
-	$: description = `Definition of '${definition.slug}' by ${variables.siteName}`;
-	$: name = `${definition.slug} Definition`;
+	$: description = `Definition of '${titleCase(definition.slug)}' by ${variables.siteName}`;
+	$: name = `${titleCase(definition.slug)} Definition`;
 	$: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
 
 	$: schema = jsonLd<DefinedTerm | DefinedTermSet | WebPage | WebSite>([
@@ -31,7 +32,7 @@
 			'@id': websiteId,
 			url: canonicalUrl(),
 			name: variables.siteName,
-			image: canonicalUrl("/favicon.png"),
+			image: canonicalUrl('/favicon.png')
 		},
 		{
 			'@context': 'https://schema.org',

@@ -7,9 +7,9 @@
 	const websiteId = canonicalUrl('#website');
 	$: url = canonicalUrl();
 
-	const description = `Definitions for common furry terms`;
-
 	const image = canonicalUrl('/landing.png');
+
+	export let description: string;
 
 	$: schema = jsonLd<DefinedTerm | DefinedTermSet | WebPage | WebSite>([
 		{

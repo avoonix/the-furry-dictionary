@@ -3,7 +3,7 @@
 	<head>
 		<meta
 			http-equiv="Content-Security-Policy"
-			content="default-src 'self' https://comments.app; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://comments.app; img-src 'self'; style-src 'unsafe-eval' 'unsafe-inline' 'self'; connect-src 'self' ws:"
+			content="default-src 'self' https://comments.app; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://comments.app; img-src 'self' https://the-furry-dictionary.avoonix.com; style-src 'unsafe-eval' 'unsafe-inline' 'self'; connect-src 'self' ws:"
 		/>
 		<meta name="theme-color" content="#3B82F6">
 		<link rel="sitemap" href="/sitemap.xml" type="application/xml" />
@@ -23,7 +23,7 @@
 			}
 		</script>
 	</head>
-	<body>
+	<body class="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-transparent">
 		<div class="min-h-screen text-slate-900 dark:text-gray-100">%sveltekit.body%</div>
 	</body>
 </html>

@@ -6,10 +6,13 @@
 
 	let query = '';
 
-	$: filtered = query ? all.filter((w) => w.slug.toLowerCase().includes(query.toLowerCase())) : [];
+	$: lower = query.toLowerCase();
+	$: filtered = query
+		? all
+				.filter((w) => w.slug.toLowerCase().includes(lower))
+				.sort(({ slug: a }, { slug: b }) => a.indexOf(lower) - b.indexOf(lower))
+		: [];
 	$: padded = [...new Array(7)].fill(null).map<Word | null>((_, idx) => filtered[idx] || null); // limit to 7 results and pad the test with null
-
-	const suggestedSearches = ['fur', 'uwu', 'paw'];
 </script>
 
 <div class="relative mt-4">
@@ -30,13 +33,10 @@
 </div>
 
 <div class="mb-2">
-	Suggested:
-
-	<span>
-		{#each suggestedSearches as item}
-			<span class="cursor-pointer text-blue-500" on:click={() => (query = item)}>{item} </span>
-		{/each}
-	</span>
+	Try
+	<span class="cursor-pointer text-blue-500" on:click={() => (query = 'fur')}>fur</span>,
+	<span class="cursor-pointer text-blue-500" on:click={() => (query = 'uwu')}>uwu</span> or
+	<span class="cursor-pointer text-blue-500" on:click={() => (query = 'paw')}>paw</span>
 </div>
 
 <WordList words={padded} />

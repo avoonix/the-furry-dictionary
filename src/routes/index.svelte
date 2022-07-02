@@ -19,9 +19,11 @@
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import IndexHead from '$lib/components/IndexHead.svelte';
 	export let all: Page[];
+
+	const description = `This dictionary contains definitions for terms specific to the furry fandom and also more general internet vocabulary that is used frequently by furries.`;
 </script>
 
-<IndexHead />
+<IndexHead {description} />
 
 <div>
 	<div class="text-center flex flex-col justify-center py-6 px-6 min-h-screen">
@@ -44,6 +46,10 @@
 		<div class="container mx-auto px-4 md:w-[50%] lg:w-[30%]">
 			<Search {all} />
 		</div>
+
+		<p class="container mx-auto md:w-[60%] lg:w-[40%] mt-16">
+			{description}
+		</p>
 	</div>
 </div>
 

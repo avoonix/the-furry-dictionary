@@ -27,6 +27,7 @@
 	import type { SvelteComponent } from 'svelte';
 	import { browser } from '$app/env';
 	import Comments from '$lib/components/Comments.svelte';
+	import { canonicalUrl } from '$lib/seo';
 
 	export let body: SvelteComponent;
 	export let definition: Page;
@@ -34,6 +35,8 @@
 	let disableComments = browser
 		? localStorage.getItem('disableComments') === 'true' || false
 		: false;
+
+	$: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
 </script>
 
 <DefinitionHead {definition} />
@@ -87,4 +90,6 @@
 			<Comments />
 		{/key}
 	{/if}
+
+	<a href={image} class="hidden" >Definition of {definition.slug}</a>
 </div>
