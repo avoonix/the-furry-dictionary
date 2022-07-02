@@ -1,3 +1,8 @@
 ## Definition of facepaw
 
-facepalm
+a facepalm
+
+## Related Terms
+
+- [facehoof](./facehoof)
+- [faceclaw](./faceclaw)

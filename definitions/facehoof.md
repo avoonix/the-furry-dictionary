@@ -1,3 +1,3 @@
 ## Definition of facehoof
 
-[facepaw](./facepaw), but for hoofed characters
+a [facepaw](./facepaw) for hoofed characters

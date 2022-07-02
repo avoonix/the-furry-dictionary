@@ -10,3 +10,4 @@ may refer to a [fullsuit](./fullsuit), [partial](./partial) or just the head
 - [plantigrade](./plantigrade)
 - [fursuiting](./fursuiting)
 - [murrsuit](./murrsuit)
+- [kigurumi](./kigurumi)
