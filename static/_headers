@@ -1,0 +1,5 @@
+https://:project.pages.dev/*
+    X-Robots-Tag: noindex
+
+/*
+    Cache-Control: public, max-age=1209600
