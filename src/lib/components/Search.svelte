@@ -5,6 +5,7 @@
 	export let all: Word[];
 
 	let query = '';
+	export let placeholder = 'Search...';
 
 	$: lower = query.toLowerCase();
 	$: filtered = query
@@ -28,7 +29,7 @@
 		bind:value={query}
 		type="text"
 		class="bg-blue-500 dark:bg-transparent focus:bg-blue-500 border-blue-500 text-slate-100 placeholder:text-slate-100 text-lg rounded-full block w-full pl-10 p-2.5"
-		placeholder="Search..."
+		{placeholder}
 	/>
 </div>
 

@@ -33,7 +33,13 @@ import { createServer } from 'http-server';
 		if (!entry.endsWith('.md')) continue;
 		promises.push(takeScreenshotOfTerm(entry.replace(/\.md/, '')));
 	}
-	await Promise.allSettled(promises);
+	const results = await Promise.allSettled(promises);
+
+	for (const result of results) {
+		if (result.status === 'rejected') {
+			console.log(result);
+		}
+	}
 
 	await browser.close();
 	server.close();
