@@ -18,7 +18,7 @@ const second = 1000;
 			deviceScaleFactor: 1,
 			colorScheme: 'dark'
 		});
-		await page.goto(`http://localhost:3000/${term}`);
+		await page.goto(`http://localhost:3000/${term}`, { timeout: 60 * second });
 		await page.addStyleTag({
 			content: `.prose { padding: 32px; } .term-buttons { display: none; }`
 		});
