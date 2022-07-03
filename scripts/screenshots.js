@@ -3,6 +3,8 @@ import { chromium } from 'playwright';
 import { readdir } from 'fs/promises';
 import { createServer } from 'http-server';
 
+const second = 1000;
+
 (async () => {
 	const server = createServer({ root: 'build' });
 	server.listen(3000);
@@ -20,8 +22,9 @@ import { createServer } from 'http-server';
 		await page.addStyleTag({
 			content: `.prose { padding: 32px; } .term-buttons { display: none; }`
 		});
-		page.screenshot({});
-		await page.locator('.prose').screenshot({ path: `./build/terms/${term}.png`, scale: 'device' });
+		await page
+			.locator('.prose')
+			.screenshot({ path: `./build/terms/${term}.png`, scale: 'device', timeout: 60 * second });
 		await page.close();
 		done++;
 		console.log(`screenshots taken: ${done}`);
