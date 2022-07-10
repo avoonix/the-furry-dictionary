@@ -20,7 +20,7 @@
 	import IndexHead from '$lib/components/IndexHead.svelte';
 	export let all: Page[];
 
-	const description = `This dictionary contains definitions for terms specific to the furry fandom and also more general internet vocabulary that is used frequently by furries.`;
+	const description = `There are many abbreviations and slang terms in use in the furry fandom that everyone is expected to know, but many aren't that straightforward. This dictionary contains definitions for many of the most used ones and also more general internet vocabulary that is used frequently by furries.`;
 </script>
 
 <IndexHead {description} />

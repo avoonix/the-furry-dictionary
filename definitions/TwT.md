@@ -2,9 +2,14 @@
 
 crying face
 
-## Synonyms and similar Words
+## Other Variations
 
-- TvT - [birb](./birb) version
+| Face  | Meaning            |
+| ----- | ------------------ |
+| TvT   | [birb](./birb) TwT |
+| ;w;   | crying             |
+| ಠ_ಠ   | bored              |
+| \*w\* | dead               |
 
 ## Related Terms
 

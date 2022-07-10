@@ -1,7 +1,7 @@
 ## Definition of foxo
 
-cute version of *fox*
+cute version of _fox_
 
 ## Related Terms
 
-- slut
+- [tail raiser](./tail%20raiser)

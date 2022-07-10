@@ -6,13 +6,13 @@ expression when someone is happy or saw something cute
 
 - Aww this is so cute UwU
 
-## Synonyms and similar Words
+## Other Variations
 
-- uwu - lowercase version
-- UvU - [birb](./birb) version
-- Unicode versions
-  - (′ꈍωꈍ‵)
-  - (=UܫU=)∫
+| Face      | Meaning            |
+| --------- | ------------------ |
+| UvU       | [birb](./birb) UwU |
+| (′ꈍωꈍ‵) | unicode UwU        |
+| (=UܫU=)∫  | unicode UwU        |
 
 ## Related Terms
 

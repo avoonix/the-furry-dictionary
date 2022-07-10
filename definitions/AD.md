@@ -1,3 +1,3 @@
-## Definition of after dark
+## Definition of AD
 
-after dark; a separate account on a social network just for [yiff](./yiff)
+after dark account; a separate account on a social network just for [yiff](./yiff)
