@@ -26,15 +26,6 @@ const config = {
 		prerender: {
 			default: true,
 			entries: ['*', '/sitemap.xml']
-		},
-
-		vite: {
-			server: {
-				fs: {
-					strict: true,
-					allow: ['.']
-				}
-			}
 		}
 	}
 };

@@ -5,3 +5,7 @@ node_modules
 /package
 .env.*
 !.env.example
+
+# generated
+static/favicon-*.png
+static/favicon.ico
