@@ -3,9 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev --port 3000",
-		"build": "svelte-kit build; node scripts/screenshots.js",
-		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
+		"build": "vite build; node scripts/screenshots.js",
+		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
