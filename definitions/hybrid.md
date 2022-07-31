@@ -6,6 +6,7 @@ a combination of multiple species
 
 - fox + wolf = [folf](./folf)
 - mammal + robot = [protogen](./protogen)
+- fox + shark = [manokit](./manokit)
 - lion + tiger = liger
 - wolf + dog = wolfdog
 - wolf + husky = wolfsky or wusky
