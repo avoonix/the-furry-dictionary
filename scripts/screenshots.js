@@ -4,6 +4,7 @@ import { readdir } from 'fs/promises';
 import { createServer } from 'http-server';
 
 const second = 1000;
+const minute = 60 * second;
 
 (async () => {
 	const server = createServer({ root: 'build' });
@@ -18,13 +19,13 @@ const second = 1000;
 			deviceScaleFactor: 1,
 			colorScheme: 'dark'
 		});
-		await page.goto(`http://localhost:3000/${term}`, { timeout: 60 * second });
+		await page.goto(`http://localhost:3000/${term}`, { timeout: 3 * minute });
 		await page.addStyleTag({
 			content: `.prose { padding: 32px; } .term-buttons { display: none; }`
 		});
 		await page
 			.locator('.prose')
-			.screenshot({ path: `./build/terms/${term}.png`, scale: 'device', timeout: 60 * second });
+			.screenshot({ path: `./build/terms/${term}.png`, scale: 'device', timeout: 3 * minute });
 		await page.close();
 		done++;
 		console.log(`screenshots taken: ${done}`);
