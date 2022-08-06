@@ -1,6 +1,6 @@
 ## Definition of the goods
 
-the [pawbs](./pawbs) or [beans](./bean)
+the [pawbs](./pawbs) or [beans](./beans)
 
 ## Examples of the goods
 

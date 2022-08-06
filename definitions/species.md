@@ -17,3 +17,4 @@ A classification of groups of animals
 - [taur](./taur)
 - [bnuuy](./bnuuy)
 - [derg](./derg)
+- [leggy](./leggy)

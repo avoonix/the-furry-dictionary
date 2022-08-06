@@ -9,3 +9,5 @@
 - [yiffsuit](./yiffsuit)
 - [yiffing](./yiffing)
 - [furotica](./furotica)
+- [tail sex](./tail%20sex)
+- [pawing off](./pawing%20off)

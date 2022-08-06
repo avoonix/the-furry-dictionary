@@ -15,12 +15,17 @@ async function processLineByLine() {
 	const fileStream = fs.createReadStream('stats/filtered.json');
 	const terms = await getTerms();
 
-	const termVariants = Object.fromEntries(
-		terms.flatMap((term) => [
-			[pluralize.singular(term), term],
-			[pluralize.plural(term), term]
-		])
-	);
+	const termVariants = Object.fromEntries([
+		...terms
+			.filter((term) => !['bean', 'beans'].includes(term))
+			.flatMap((term) => [
+				[pluralize.singular(term), term],
+				[pluralize.plural(term), term]
+			]),
+		// pluralizing changes their meaning
+		['bean', 'bean'],
+		['beans', 'beans']
+	]);
 
 	for (const term of terms) {
 		termCounts[term] = 0;
