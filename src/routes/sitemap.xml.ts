@@ -3,7 +3,7 @@ import { letters } from '$lib/letters';
 import { canonicalUrl } from '$lib/seo';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
 	return {
 		headers: {
 			'Cache-Control': `max-age=0, s-max-age=600`,

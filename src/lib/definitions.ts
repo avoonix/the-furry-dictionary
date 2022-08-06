@@ -1,4 +1,5 @@
 import { parse } from 'node-html-parser';
+import stats from '/stats/result.json';
 
 export interface Word {
 	slug: string;
@@ -9,6 +10,7 @@ export interface Definition extends Word {}
 export interface Page extends Definition {
 	prev: Word[];
 	next: Word[];
+	frequency: number;
 	preview: {
 		text: string;
 	};
@@ -44,6 +46,7 @@ const definitions: Definition[] = Object.entries(import.meta.globEager('/definit
 			...definition,
 			prev: [],
 			next: [],
+			frequency: stats[definition.slug.toLowerCase()] || 1,
 			preview: {
 				text: preview.structuredText
 			}

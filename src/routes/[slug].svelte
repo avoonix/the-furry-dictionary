@@ -18,7 +18,6 @@
 
 <script lang="ts">
 	import type { Page } from '$lib/definitions';
-	import SurroundingWords from '$lib/components/SurroundingWords.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import BrowseByLetter from '$lib/components/BrowseByLetter.svelte';
@@ -28,6 +27,7 @@
 	import { browser } from '$app/env';
 	import Comments from '$lib/components/Comments.svelte';
 	import { canonicalUrl } from '$lib/seo';
+	import DefinitionInfos from '$lib/components/DefinitionInfos.svelte';
 
 	export let body: SvelteComponent;
 	export let definition: Page;
@@ -50,10 +50,13 @@
 		</div>
 
 		<svelte:component this={body} />
+
+		<div class="not-prose">
+			<div class="mt-24" />
+			<DefinitionInfos frequency={definition.frequency} prev={definition.prev} next={definition.next} />
+		</div>
 	</article>
 
-	<div class="mt-24" />
-	<SurroundingWords prev={definition.prev} next={definition.next} />
 	<div class="mt-24" />
 	<SectionHeader>Browse the dictionary</SectionHeader>
 	<BrowseByLetter />
@@ -91,5 +94,5 @@
 		{/key}
 	{/if}
 
-	<a href={image} class="hidden" >Definition of {definition.slug}</a>
+	<a href={image} class="hidden">Definition of {definition.slug}</a>
 </div>
