@@ -3,15 +3,15 @@
 
 	$: filter = `hue-rotate(${105 + 25 * value}deg)`;
 
-	const texts: { [idx: number]: string } = {
-		1: 'very uncommon or not used anymore',
-		2: 'uncommon',
-		3: 'somewhat common',
-		4: 'common',
-		5: 'very common'
-	};
+	// const texts: { [idx: number]: string } = {
+	// 	1: 'very uncommon or not used anymore',
+	// 	2: 'uncommon',
+	// 	3: 'somewhat common',
+	// 	4: 'common',
+	// 	5: 'very common'
+	// };
 
-	$: text = texts[value];
+	// $: text = texts[value];
 </script>
 
 <div class="flex" title="Occurences in reddit comments (June 2022)">
@@ -25,7 +25,7 @@
 			/>
 		</div>
 	{/each}
-	<div class="ml-2">
+	<!-- <div class="ml-2">
 		{text} 
-	</div>
+	</div> -->
 </div>
