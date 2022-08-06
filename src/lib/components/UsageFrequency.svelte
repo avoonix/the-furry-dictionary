@@ -19,7 +19,7 @@
 		<div class="">
 			<img
 				alt=""
-				class="w-[1.5em] h-[1.5em]"
+				class="w-[1.5em] h-[1.5em] -ml-1 mr-1"
 				src="/favicon.svg"
 				style={`filter: ${idx < value ? filter : 'grayscale(100%)'};`}
 			/>
