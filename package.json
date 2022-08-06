@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev --port 3000",
-		"build": "vite build; node scripts/screenshots.js",
+		"build": "vite build && node scripts/screenshots.js",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",

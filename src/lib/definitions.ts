@@ -42,11 +42,13 @@ const definitions: Definition[] = Object.entries(import.meta.globEager('/definit
 		const preview = definition.customPreview
 			? definition.customPreview
 			: parsedHtml.querySelector('p') || parsedHtml.querySelector('li');
+		const frequency = stats[definition.slug.toLowerCase()]
+		if(!frequency) throw new Error("frequency missing");
 		return {
 			...definition,
 			prev: [],
 			next: [],
-			frequency: stats[definition.slug.toLowerCase()] || 1,
+			frequency,
 			preview: {
 				text: preview.structuredText
 			}
