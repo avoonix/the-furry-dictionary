@@ -13,6 +13,7 @@ https://the-furry-dictionary.avoonix.com/
 - https://web.archive.org/web/20210105191529/https://www.furcen.org/fgc/glossary.html
 - https://www.reddit.com/r/furry/comments/37tvx3/lets_make_a_glossary/
 - https://en.wikifur.com/
+- https://files.pushshift.io/reddit/comments/
 
 ## Developing
 
