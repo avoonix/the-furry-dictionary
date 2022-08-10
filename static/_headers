@@ -1,5 +1,8 @@
 https://:project.pages.dev/*
     X-Robots-Tag: noindex
 
-/*
+/_app/immutable/*
     Cache-Control: public, max-age=1209600
+
+/*
+    Content-Security-Policy: default-src 'self' https://comments.app; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://comments.app; img-src 'self' https://the-furry-dictionary.avoonix.com; style-src 'unsafe-eval' 'unsafe-inline' 'self'; connect-src 'self' ws:;
