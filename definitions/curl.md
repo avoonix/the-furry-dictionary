@@ -1,6 +1,7 @@
 ## Definition of curl
 
-the tail of a husky
+1. cute name for huskies
+2. the tail of a husky
 
 ## See Also
 
