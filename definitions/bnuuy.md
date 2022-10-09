@@ -2,9 +2,9 @@
 
 cute version of *bunny*
 
-## Notes
+## Alternate Spellings
 
-also written as *bnnuy*
+- [bnnuy](./bnnuy)
 
 ## Related Terms
 
