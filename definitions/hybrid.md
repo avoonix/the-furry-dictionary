@@ -14,5 +14,9 @@ a combination of multiple species
 - [cabbit](./cabbit)
 - [jackalope](./jackalope)
 - [foxcoon](./foxcoon)
+
+## Examples (Mythical)
+
 - [chimera](./chimera)
 - [gryphon](./gryphon)
+- [hippogriff](./hippogriff)

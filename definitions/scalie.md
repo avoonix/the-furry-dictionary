@@ -1,3 +1,7 @@
 ## Definition of scalie
 
- reptilians and amphibians
+reptilians and amphibians
+
+## See Also
+
+- [scalesona](./scalesona)
