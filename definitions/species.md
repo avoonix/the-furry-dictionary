@@ -24,4 +24,5 @@ A classification of groups of animals
 ## Other species
 
 - [synth](./synth)
+- [skulldog](./skulldog)
 - [hybrids](./hybrid)
