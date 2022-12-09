@@ -1,20 +1,20 @@
 const config = {
-	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts,md}'],
+  darkMode: "class",
+  content: ["./src/**/*.{html,js,svelte,ts,md}"],
 
-	theme: {
-		extend: {}
-	},
+  theme: {
+    extend: {},
+  },
 
-	plugins: [
-		require('@tailwindcss/typography'),
-		require('@tailwindcss/forms'),
-		require('tailwind-scrollbar')
-	],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("tailwind-scrollbar"),
+  ],
 
-	variants: {
-		scrollbar: ['dark']
-	}
+  variants: {
+    scrollbar: ["dark"],
+  },
 };
 
 module.exports = config;

@@ -1,6 +1,6 @@
 ## Definition of bnuuy
 
-cute version of *bunny*
+cute version of _bunny_
 
 ## Alternate Spellings
 

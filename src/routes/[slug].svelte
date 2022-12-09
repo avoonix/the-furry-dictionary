@@ -1,42 +1,42 @@
 <script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
+  import type { Load } from "@sveltejs/kit";
 
-	export const load: Load = async ({ params: { slug }, fetch }) => {
-		const pages: Page[] = await fetch('/definitions.json').then((res) => res.json());
-		const definition = pages.find((page) => slug === page.slug);
-		if (!definition) {
-			return { status: 404, error: 'Page not found' };
-		}
-		return {
-			props: {
-				definition,
-				body: (await import(`../../definitions/${definition.slug}.md`)).default
-			}
-		};
-	};
+  export const load: Load = async ({ params: { slug }, fetch }) => {
+    const pages: Page[] = await fetch("/definitions.json").then((res) => res.json());
+    const definition = pages.find((page) => slug === page.slug);
+    if (!definition) {
+      return { status: 404, error: "Page not found" };
+    }
+    return {
+      props: {
+        definition,
+        body: (await import(`../../definitions/${definition.slug}.md`)).default,
+      },
+    };
+  };
 </script>
 
 <script lang="ts">
-	import type { Page } from '$lib/definitions';
-	import Header from '$lib/components/Header.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import BrowseByLetter from '$lib/components/BrowseByLetter.svelte';
-	import DefinitionHead from '$lib/components/DefinitionHead.svelte';
-	import DefinitionHero from '$lib/components/DefinitionHero.svelte';
-	import type { SvelteComponent } from 'svelte';
-	import { browser } from '$app/env';
-	import Comments from '$lib/components/Comments.svelte';
-	import { canonicalUrl } from '$lib/seo';
-	import DefinitionInfos from '$lib/components/DefinitionInfos.svelte';
+  import type { Page } from "$lib/definitions";
+  import Header from "$lib/components/Header.svelte";
+  import SectionHeader from "$lib/components/SectionHeader.svelte";
+  import BrowseByLetter from "$lib/components/BrowseByLetter.svelte";
+  import DefinitionHead from "$lib/components/DefinitionHead.svelte";
+  import DefinitionHero from "$lib/components/DefinitionHero.svelte";
+  import type { SvelteComponent } from "svelte";
+  import { browser } from "$app/env";
+  import Comments from "$lib/components/Comments.svelte";
+  import { canonicalUrl } from "$lib/seo";
+  import DefinitionInfos from "$lib/components/DefinitionInfos.svelte";
 
-	export let body: SvelteComponent;
-	export let definition: Page;
+  export let body: SvelteComponent;
+  export let definition: Page;
 
-	let disableComments = browser
-		? localStorage.getItem('disableComments') === 'true' || false
-		: false;
+  let disableComments = browser
+    ? localStorage.getItem("disableComments") === "true" || false
+    : false;
 
-	$: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
+  $: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
 </script>
 
 <DefinitionHead {definition} />
@@ -44,55 +44,59 @@
 <Header />
 
 <div class="page-container">
-	<article class="relative prose lg:prose-xl max-w-none dark:prose-invert prose-slate">
-		<div class="not-prose">
-			<DefinitionHero slug={definition.slug} />
-		</div>
+  <article class="relative prose lg:prose-xl max-w-none dark:prose-invert prose-slate">
+    <div class="not-prose">
+      <DefinitionHero slug={definition.slug} />
+    </div>
 
-		<svelte:component this={body} />
+    <svelte:component this={body} />
 
-		<div class="not-prose">
-			<div class="mt-24" />
-			<DefinitionInfos frequency={definition.frequency} prev={definition.prev} next={definition.next} />
-		</div>
-	</article>
+    <div class="not-prose">
+      <div class="mt-24" />
+      <DefinitionInfos
+        frequency={definition.frequency}
+        prev={definition.prev}
+        next={definition.next}
+      />
+    </div>
+  </article>
 
-	<div class="mt-24" />
-	<SectionHeader>Browse the dictionary</SectionHeader>
-	<BrowseByLetter />
-	<div class="mt-24" />
-	<SectionHeader>Comments on {definition.slug}</SectionHeader>
-	<button
-		class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
-		on:click={() => {
-			disableComments = !disableComments;
-			if (disableComments) {
-				localStorage.setItem('disableComments', 'true');
-			} else {
-				localStorage.removeItem('disableComments');
-			}
-		}}
-	>
-		<svg class="text-slate-500" style="width:24px;height:24px" viewBox="0 0 24 24">
-			{#if disableComments}
-				<path
-					fill="currentColor"
-					d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
-				/>
-			{:else}
-				<path
-					fill="currentColor"
-					d="M7.2 4L5.2 2H20C21.11 2 22 2.9 22 4V16C22 16.76 21.57 17.41 20.95 17.75L19.2 16H20V4H7.2M22.11 21.46L20.84 22.73L16.11 18H13.9L10.2 21.71C10 21.9 9.75 22 9.5 22H9C8.45 22 8 21.55 8 21V18H4C2.9 18 2 17.11 2 16V4C2 3.97 2 3.93 2 3.9L1.11 3L2.39 1.73L22.11 21.46M14.11 16L4 5.89V16H10V19.08L13.08 16H14.11Z"
-				/>
-			{/if}
-		</svg>
-	</button>
+  <div class="mt-24" />
+  <SectionHeader>Browse the dictionary</SectionHeader>
+  <BrowseByLetter />
+  <div class="mt-24" />
+  <SectionHeader>Comments on {definition.slug}</SectionHeader>
+  <button
+    class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
+    on:click={() => {
+      disableComments = !disableComments;
+      if (disableComments) {
+        localStorage.setItem("disableComments", "true");
+      } else {
+        localStorage.removeItem("disableComments");
+      }
+    }}
+  >
+    <svg class="text-slate-500" style="width:24px;height:24px" viewBox="0 0 24 24">
+      {#if disableComments}
+        <path
+          fill="currentColor"
+          d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
+        />
+      {:else}
+        <path
+          fill="currentColor"
+          d="M7.2 4L5.2 2H20C21.11 2 22 2.9 22 4V16C22 16.76 21.57 17.41 20.95 17.75L19.2 16H20V4H7.2M22.11 21.46L20.84 22.73L16.11 18H13.9L10.2 21.71C10 21.9 9.75 22 9.5 22H9C8.45 22 8 21.55 8 21V18H4C2.9 18 2 17.11 2 16V4C2 3.97 2 3.93 2 3.9L1.11 3L2.39 1.73L22.11 21.46M14.11 16L4 5.89V16H10V19.08L13.08 16H14.11Z"
+        />
+      {/if}
+    </svg>
+  </button>
 
-	{#if browser && !disableComments}
-		{#key definition.slug}
-			<Comments />
-		{/key}
-	{/if}
+  {#if browser && !disableComments}
+    {#key definition.slug}
+      <Comments />
+    {/key}
+  {/if}
 
-	<a href={image} class="hidden">Definition of {definition.slug}</a>
+  <a href={image} class="hidden">Definition of {definition.slug}</a>
 </div>

@@ -1,6 +1,6 @@
 ## Definition of pawbs
 
-the cute version of *paws*
+the cute version of _paws_
 
 ## Related Terms
 

@@ -5,7 +5,7 @@ the [pawbs](./pawbs) or [beans](./beans)
 ## Examples of the goods
 
 - A: Show me the goods<br>
-  B: *raises paws*
+  B: _raises paws_
 
 ## Related Terms
 

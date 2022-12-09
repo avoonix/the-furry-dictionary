@@ -1,7 +1,7 @@
-import { crossfade } from 'svelte/transition';
+import { crossfade } from "svelte/transition";
 
 const [send, receive] = crossfade({
-	duration: 500
+  duration: 500,
 });
 
 export { send, receive };

@@ -1,6 +1,6 @@
 ## Definition of foxcoon
 
-a cross between a fox and a raccoon 
+a cross between a fox and a raccoon
 
 ## See Also
 

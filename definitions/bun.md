@@ -1,6 +1,6 @@
 ## Definition of bun
 
-cute version of *bunny*
+cute version of _bunny_
 
 ## Related Terms
 

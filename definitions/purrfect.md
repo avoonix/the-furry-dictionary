@@ -1,3 +1,3 @@
 ## Definition of purrfect
 
-common [furspeech](./furspeech) term for *perfect*
+common [furspeech](./furspeech) term for _perfect_

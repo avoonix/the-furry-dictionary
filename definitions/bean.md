@@ -2,7 +2,8 @@
 
 singular: a cute character, that may also be [smol](./smol)
 
-plural: 
+plural:
+
 1. many cute characters
 2. paw pads (see [beans](./beans))
 

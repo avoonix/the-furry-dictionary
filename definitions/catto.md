@@ -1,3 +1,3 @@
 ## Definition of catto
 
-cute version of *cat*
+cute version of _cat_

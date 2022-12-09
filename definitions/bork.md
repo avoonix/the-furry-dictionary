@@ -4,5 +4,4 @@ barking
 
 ## Examples of bork in a Sentence
 
-- *bork bork bork bork bork bork*
-
+- _bork bork bork bork bork bork_

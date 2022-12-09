@@ -1,5 +1,5 @@
 {
-    "unwantedRecommendations": [
-        "ms-azuretools.vscode-docker" // docker only used for codespaces config
-    ]
+  "unwantedRecommendations": [
+    "ms-azuretools.vscode-docker" // docker only used for codespaces config
+  ]
 }

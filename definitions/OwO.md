@@ -8,12 +8,12 @@ expression when someone finds something interesting or arousing
 
 ## Other Variations
 
-| Face  | Meaning            |
-| ----- | ------------------ |
-| OvO   | [birb](./birb) OwO |
-| ÓwÒ   | sad                |
-| ÒwÓ   | angry              |
-| ^w^   | happy              |
+| Face | Meaning            |
+| ---- | ------------------ |
+| OvO  | [birb](./birb) OwO |
+| ÓwÒ  | sad                |
+| ÒwÓ  | angry              |
+| ^w^  | happy              |
 
 ## Related Terms
 

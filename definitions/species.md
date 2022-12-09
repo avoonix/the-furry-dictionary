@@ -6,7 +6,7 @@ A classification of groups of animals
 
 - What species is your fursona?
 
-## Common *cute* species names
+## Common _cute_ species names
 
 - [foxo](./foxo)
 - [snep](./snep)

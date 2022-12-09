@@ -1,3 +1,3 @@
 ## Definition of doggo
 
-cute version of *dog*
+cute version of _dog_
