@@ -11,3 +11,4 @@ may refer to a [fullsuit](./fullsuit), [partial](./partial) or just the head
 - [fursuiting](./fursuiting)
 - [murrsuit](./murrsuit)
 - [kigurumi](./kigurumi)
+- [suit](./suit)
