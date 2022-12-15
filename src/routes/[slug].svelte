@@ -98,5 +98,12 @@
     {/key}
   {/if}
 
-  <a href={image} class="hidden">Definition of {definition.slug}</a>
+  <noscript style="visibility: hidden; display: none;">
+    <!-- 
+      the image should be crawled by search engines, but not shown/loaded for users
+      just using loading="lazy" and display: none did not work
+    -->
+    <a href={image} style="visibility: hidden; display: none;">Definition of {definition.slug}</a>
+    <img src={image} style="visibility: hidden; display: none;" alt={definition.preview.all} loading="lazy" />
+  </noscript>
 </div>

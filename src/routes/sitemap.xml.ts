@@ -27,10 +27,14 @@ export const GET: RequestHandler = async () => {
         </url>
         ${getPages()
           .map(
+            // https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
             (page) => `<url>
               <loc>${canonicalUrl(page.slug)}</loc>
               <changefreq>monthly</changefreq>
               <priority>1.0</priority>
+              <image:image>
+                <image:loc>${canonicalUrl(`/terms/${encodeURIComponent(page.slug)}.png`)}</image:loc>
+              </image:image>
             </url>`,
           )
           .join("")}

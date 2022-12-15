@@ -1,18 +1,17 @@
 import { parse } from "node-html-parser";
 import stats from "/stats/result.json";
 
-export interface Word {
+export interface Definition {
   slug: string;
 }
 
-export interface Definition extends Word {}
-
 export interface Page extends Definition {
-  prev: Word[];
-  next: Word[];
+  prev: Definition[];
+  next: Definition[];
   frequency: number;
   preview: {
     text: string;
+    all: string;
   };
 }
 
@@ -24,7 +23,7 @@ export function getPages({ page = 1, limit = Infinity } = {}) {
   return definitions;
 }
 
-const definitionToWord = (def: Definition): Word => ({ slug: def.slug });
+const definitionToWord = (def: Definition): Definition => ({ slug: def.slug });
 
 const definitions: Definition[] = Object.entries(import.meta.globEager("/definitions/**/*.md"))
   .map(([filepath, definition]) => {
@@ -51,6 +50,7 @@ const definitions: Definition[] = Object.entries(import.meta.globEager("/definit
       frequency,
       preview: {
         text: preview.structuredText,
+        all: parsedHtml.structuredText
       },
     };
   })
