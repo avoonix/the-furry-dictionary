@@ -23,7 +23,7 @@ const config = {
       //   assets: 'public'
     }),
     prerender: {
-      entries: ["*", "/sitemap.xml"],
+      entries: ["*", "/sitemap.xml", "/_redirects"],
     },
   },
 };
