@@ -1,24 +1,10 @@
-<script context="module" lang="ts">
-  import type { Page } from "$lib/definitions";
-  import type { Load } from "@sveltejs/kit";
-
-  export const load: Load = async ({ fetch }) => {
-    const all: Page[] = await fetch("/definitions.json").then((res) => res.json()); // TODO: remove
-    return {
-      props: {
-        all,
-      },
-    };
-  };
-</script>
-
 <script lang="ts">
   import Search from "$lib/components/Search.svelte";
   import BrowseByLetter from "$lib/components/BrowseByLetter.svelte";
   import { receive, send } from "$lib/crossfade";
   import SectionHeader from "$lib/components/SectionHeader.svelte";
   import IndexHead from "$lib/components/IndexHead.svelte";
-  export let all: Page[];
+  export let data: import('./$types').PageData;
 
   const description = `There are many abbreviations and slang terms in use in the furry fandom that everyone is expected to know, but many aren't that straightforward. This dictionary contains definitions for many of the most used ones and also more general internet vocabulary that is used frequently by furries.`;
 </script>
@@ -44,7 +30,7 @@
     </div>
 
     <div class="container mx-auto px-4 md:w-[50%] lg:w-[30%]">
-      <Search {all} />
+      <Search all={data.all} />
     </div>
 
     <p class="container mx-auto md:w-[60%] lg:w-[40%] mt-16">

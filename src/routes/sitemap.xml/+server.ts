@@ -4,12 +4,8 @@ import { canonicalUrl } from "$lib/seo";
 import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async () => {
-  return {
-    headers: {
-      "Cache-Control": `max-age=0, s-max-age=600`,
-      "Content-Type": "application/xml",
-    },
-    body: `<?xml version="1.0" encoding="UTF-8" ?>
+  return new Response(
+    `<?xml version="1.0" encoding="UTF-8" ?>
       <urlset
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
@@ -33,7 +29,9 @@ export const GET: RequestHandler = async () => {
               <changefreq>monthly</changefreq>
               <priority>1.0</priority>
               <image:image>
-                <image:loc>${canonicalUrl(`/terms/${encodeURIComponent(page.slug)}.png`)}</image:loc>
+                <image:loc>${canonicalUrl(
+                  `/terms/${encodeURIComponent(page.slug)}.png`,
+                )}</image:loc>
               </image:image>
             </url>`,
           )
@@ -48,5 +46,13 @@ export const GET: RequestHandler = async () => {
           )
           .join("")}
       </urlset>`,
-  };
+    {
+      headers: {
+        "Cache-Control": `max-age=0, s-max-age=600`,
+        "Content-Type": "application/xml",
+      },
+    },
+  );
 };
+
+export const prerender = true;

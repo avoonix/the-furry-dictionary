@@ -24,7 +24,6 @@ const config = {
       //   assets: 'public'
     }),
     prerender: {
-      default: true,
       entries: ["*", "/sitemap.xml"],
     },
   },

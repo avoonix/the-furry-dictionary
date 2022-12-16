@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from "$app/env";
+  import { browser } from "$app/environment";
   import { receive, send } from "$lib/crossfade";
 
   let isLight = browser ? !document.querySelector("html")?.classList.contains("dark") : false;

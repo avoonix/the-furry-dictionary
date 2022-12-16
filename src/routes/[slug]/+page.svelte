@@ -1,62 +1,41 @@
-<script context="module" lang="ts">
-  import type { Load } from "@sveltejs/kit";
-
-  export const load: Load = async ({ params: { slug }, fetch }) => {
-    const pages: Page[] = await fetch("/definitions.json").then((res) => res.json());
-    const definition = pages.find((page) => slug === page.slug);
-    if (!definition) {
-      return { status: 404, error: "Page not found" };
-    }
-    return {
-      props: {
-        definition,
-        body: (await import(`../../definitions/${definition.slug}.md`)).default,
-      },
-    };
-  };
-</script>
-
 <script lang="ts">
-  import type { Page } from "$lib/definitions";
-  import Header from "$lib/components/Header.svelte";
-  import SectionHeader from "$lib/components/SectionHeader.svelte";
+  import { browser } from "$app/environment";
   import BrowseByLetter from "$lib/components/BrowseByLetter.svelte";
+  import Comments from "$lib/components/Comments.svelte";
   import DefinitionHead from "$lib/components/DefinitionHead.svelte";
   import DefinitionHero from "$lib/components/DefinitionHero.svelte";
-  import type { SvelteComponent } from "svelte";
-  import { browser } from "$app/env";
-  import Comments from "$lib/components/Comments.svelte";
-  import { canonicalUrl } from "$lib/seo";
   import DefinitionInfos from "$lib/components/DefinitionInfos.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import SectionHeader from "$lib/components/SectionHeader.svelte";
+  import { canonicalUrl } from "$lib/seo";
 
-  export let body: SvelteComponent;
-  export let definition: Page;
+  export let data: import('./$types').PageData;
 
   let disableComments = browser
     ? localStorage.getItem("disableComments") === "true" || false
     : false;
 
-  $: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
+  $: image = canonicalUrl(`/terms/${encodeURIComponent(data.definition.slug)}.png`);
 </script>
 
-<DefinitionHead {definition} />
+<DefinitionHead definition={data.definition} />
 
 <Header />
 
 <div class="page-container">
   <article class="relative prose lg:prose-xl max-w-none dark:prose-invert prose-slate">
     <div class="not-prose">
-      <DefinitionHero slug={definition.slug} />
+      <DefinitionHero slug={data.definition.slug} />
     </div>
 
-    <svelte:component this={body} />
+    <svelte:component this={data.body} />
 
     <div class="not-prose">
       <div class="mt-24" />
       <DefinitionInfos
-        frequency={definition.frequency}
-        prev={definition.prev}
-        next={definition.next}
+        frequency={data.definition.frequency}
+        prev={data.definition.prev}
+        next={data.definition.next}
       />
     </div>
   </article>
@@ -65,7 +44,7 @@
   <SectionHeader>Browse the dictionary</SectionHeader>
   <BrowseByLetter />
   <div class="mt-24" />
-  <SectionHeader>Comments on {definition.slug}</SectionHeader>
+  <SectionHeader>Comments on {data.definition.slug}</SectionHeader>
   <button
     class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
     on:click={() => {
@@ -93,7 +72,7 @@
   </button>
 
   {#if browser && !disableComments}
-    {#key definition.slug}
+    {#key data.definition.slug}
       <Comments />
     {/key}
   {/if}
@@ -103,7 +82,7 @@
       the image should be crawled by search engines, but not shown/loaded for users
       just using loading="lazy" and display: none did not work
     -->
-    <a href={image} style="visibility: hidden; display: none;">Definition of {definition.slug}</a>
-    <img src={image} style="visibility: hidden; display: none;" alt={definition.preview.all} loading="lazy" />
+    <a href={image} style="visibility: hidden; display: none;">Definition of {data.definition.slug}</a>
+    <img src={image} style="visibility: hidden; display: none;" alt={data.definition.preview.all} loading="lazy" />
   </noscript>
 </div>
