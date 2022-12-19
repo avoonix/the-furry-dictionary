@@ -12,7 +12,7 @@
   $: url = canonicalUrl(definition.slug);
   $: description = `Definition of '${titleCase(definition.slug)}' by ${variables.siteName}`;
   $: name = `${titleCase(definition.slug)} Definition`;
-  $: image = canonicalUrl(`/terms/${encodeURIComponent(definition.slug)}.png`);
+  $: image = canonicalUrl(`/terms/${definition.slug}.png`);
 
   $: schema = jsonLd<DefinedTerm | DefinedTermSet | WebPage | WebSite>([
     {

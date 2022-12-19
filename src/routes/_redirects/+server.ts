@@ -1,10 +1,26 @@
+import { getPages } from "$lib/definitions";
+import { letters } from "$lib/letters";
 import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async () => {
-  return new Response(`
-/* /index.html 404
+  const pagesRedirects = getPages().flatMap((definition) => {
+    const lower = definition.slug.toLowerCase();
+    return lower === definition.slug ? [] : [`/${lower} /${definition.slug} 301`];
+  });
+
+  const lettersRedirects = letters.flatMap((letter) => {
+    const lower = letter.toLowerCase();
+    return lower === letter ? [] : [`/${letter} /${lower} 301`];
+  });
+
+  return new Response(
+    `
+/* /404.html 404
 /all /browse.html 301
-`.trim()); // TODO: redirect uppercase letters to lowercase pages, lowercase terms to correctly capitalized terms
+${pagesRedirects.join("\n")}
+${lettersRedirects.join("\n")}
+`.trim(),
+  );
 };
 
 export const prerender = true;

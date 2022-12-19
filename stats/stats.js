@@ -4,10 +4,11 @@ import { marked } from "marked";
 import { parse } from "node-html-parser";
 import _ from "lodash";
 import pluralize from "pluralize";
+import glob from "tiny-glob";
 
 async function getTerms() {
-  const entries = await fs.promises.readdir("definitions");
-  return entries.map((e) => e.replace(/\.md/, "").toLowerCase());
+  const entries = await glob("definitions/**/*.md");
+  return entries.map((e) => e.replace(/\.md/, "").replace(/^definitions\//, "").toLowerCase());
 }
 
 async function processLineByLine() {

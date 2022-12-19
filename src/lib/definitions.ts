@@ -29,10 +29,7 @@ const definitions: Definition[] = Object.entries(import.meta.globEager("/definit
   .map(([filepath, definition]) => {
     return {
       ...definition.metadata,
-      slug: filepath
-        .replace(/(\/index)?\.md/, "")
-        .split("/")
-        .pop(),
+      slug: filepath.replace(/(\/index)?\.md/, "").replace(/^\/definitions\//, ""),
       component: definition.default,
     };
   })
@@ -42,7 +39,7 @@ const definitions: Definition[] = Object.entries(import.meta.globEager("/definit
       ? definition.customPreview
       : parsedHtml.querySelector("p") || parsedHtml.querySelector("li");
     const frequency = stats[definition.slug.toLowerCase()];
-    if (!frequency) throw new Error("frequency missing");
+    if (!frequency) throw new Error(`frequency missing for ${definition.slug}`);
     return {
       ...definition,
       prev: [],
@@ -50,7 +47,7 @@ const definitions: Definition[] = Object.entries(import.meta.globEager("/definit
       frequency,
       preview: {
         text: preview.structuredText,
-        all: parsedHtml.structuredText
+        all: parsedHtml.structuredText,
       },
     };
   })

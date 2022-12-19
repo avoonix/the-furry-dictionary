@@ -12,8 +12,9 @@ export const load: PageLoad<{ definition: Page; body: SvelteComponent }> = async
   if (!definition) {
     throw error(404, "Page not found");
   }
+  const components = import.meta.glob<{ default: SvelteComponent }>(`../../../definitions/**/*.md`);
   return {
     definition,
-    body: (await import(`../../../definitions/${definition.slug}.md`)).default,
+    body: (await components[`../../../definitions/${definition.slug}.md`]()).default,
   };
 };

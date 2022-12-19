@@ -2,9 +2,15 @@
 import { chromium } from "playwright";
 import { readdir } from "fs/promises";
 import { createServer } from "http-server";
+import glob from "tiny-glob";
 
 const second = 1000;
 const minute = 60 * second;
+
+async function getTerms() {
+  const entries = await glob("definitions/**/*.md");
+  return entries.map((e) => e.replace(/\.md/, "").replace(/^definitions\//, ""));
+}
 
 (async () => {
   const server = createServer({ root: "build" });
@@ -28,14 +34,12 @@ const minute = 60 * second;
       .screenshot({ path: `./build/terms/${term}.png`, scale: "device", timeout: 3 * minute });
     await page.close();
     done++;
-    console.log(`screenshots taken: ${done}`);
+    console.log(`${term} screenshot taken - ${done} so far`);
   };
 
   const promises = [];
-  const entries = await readdir("./definitions");
-  for (const entry of entries) {
-    if (!entry.endsWith(".md")) continue;
-    promises.push(takeScreenshotOfTerm(entry.replace(/\.md/, "")));
+  for (const entry of await getTerms()) {
+    promises.push(takeScreenshotOfTerm(entry));
   }
   const results = await Promise.allSettled(promises);
 
