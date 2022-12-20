@@ -10,7 +10,7 @@ export const GET: RequestHandler = async () => {
 
   const lettersRedirects = letters.flatMap((letter) => {
     const lower = letter.toLowerCase();
-    return lower === letter ? [] : [`/${letter} /${lower} 301`];
+    return lower === letter ? [] : [`/browse/${letter} /browse/${lower} 301`];
   });
 
   return new Response(

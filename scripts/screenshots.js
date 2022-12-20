@@ -18,6 +18,7 @@ async function getTerms() {
 
   const browser = await chromium.launch({ headless: true });
   let done = 0;
+  const terms = await getTerms();
 
   const takeScreenshotOfTerm = async (/** @type {string} */ term) => {
     const page = await browser.newPage({
@@ -34,11 +35,11 @@ async function getTerms() {
       .screenshot({ path: `./build/terms/${term}.png`, scale: "device", timeout: 3 * minute });
     await page.close();
     done++;
-    console.log(`${term} screenshot taken - ${done} so far`);
+    console.log(`${term} screenshot taken (${done}/${terms.length})`);
   };
 
   const promises = [];
-  for (const entry of await getTerms()) {
+  for (const entry of terms) {
     promises.push(takeScreenshotOfTerm(entry));
   }
   const results = await Promise.allSettled(promises);
