@@ -1,9 +1,9 @@
 ---
 categories: [yiff]
 ---
-## Definition of muzzlejob
+## Definition of muzzlefuck
 
-the furry equivalent to oral sex
+using the muzzle to penetrate an orifice
 
 ## Related Terms
 

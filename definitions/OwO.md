@@ -1,5 +1,5 @@
 ---
-categories: [emoticons]
+categories: [emoticons, yiff]
 ---
 ## Definition of OwO
 
