@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of foxo
 
 cute version of _fox_

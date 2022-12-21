@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of glomp
 
 Playfuly tackle and then hug someone

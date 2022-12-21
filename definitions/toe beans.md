@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of toe beans
 
 pads on the paws

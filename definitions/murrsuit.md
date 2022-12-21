@@ -1,3 +1,6 @@
+---
+categories: [yiff, fursuits]
+---
 ## Definition of murrsuit
 
 a [fursuit](./fursuit) worn during sex

@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of facepaw
 
 a facepalm

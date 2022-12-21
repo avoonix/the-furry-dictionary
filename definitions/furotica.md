@@ -1,3 +1,6 @@
+---
+categories: [yiff]
+---
 ## Definition of furotica
 
 erotic furry literature or art

@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of feathersona
 
 a [sona](./sona) that has feathers, like birds

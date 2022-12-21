@@ -1,3 +1,6 @@
+---
+categories: [fursuits, yiff]
+---
 ## Definition of marking
 
 1. fur pattern

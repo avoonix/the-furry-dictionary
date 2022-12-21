@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Word } from "$lib/definitions";
+    import type { Definition } from "$lib/definitions";
   import WordList from "./WordList.svelte";
 
-  export let all: Word[];
+  export let all: Definition[];
 
   let query = "";
   export let placeholder = "Search...";
@@ -13,7 +13,7 @@
         .filter((w) => w.slug.toLowerCase().includes(lower))
         .sort(({ slug: a }, { slug: b }) => a.indexOf(lower) - b.indexOf(lower))
     : [];
-  $: padded = [...new Array(7)].fill(null).map<Word | null>((_, idx) => filtered[idx] || null); // limit to 7 results and pad the test with null
+  $: padded = [...new Array(7)].fill(null).map<Definition | null>((_, idx) => filtered[idx] || null); // limit to 7 results and pad the test with null
 </script>
 
 <div class="relative mt-4">

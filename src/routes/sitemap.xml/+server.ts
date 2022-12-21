@@ -41,7 +41,19 @@ export const GET: RequestHandler = async () => {
             (letter) => `<url>
               <loc>${canonicalUrl(`browse/${letter}`)}</loc>
               <changefreq>monthly</changefreq>
-              <priority>0.5</priority>
+              <priority>0.3</priority>
+            </url>`,
+          )
+          .join("")}
+        ${Object.keys(Object.fromEntries(getPages()
+          .flatMap(p => p.categories)
+          .map(c => [c, true])))
+          .map(
+            // https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
+            (category) => `<url>
+              <loc>${canonicalUrl(`category/${category}`)}</loc>
+              <changefreq>monthly</changefreq>
+              <priority>0.7</priority>
             </url>`,
           )
           .join("")}

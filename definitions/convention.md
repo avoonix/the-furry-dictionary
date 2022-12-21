@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of convention
 
 large real-life gathering

@@ -1,3 +1,6 @@
+---
+categories: [fursuits]
+---
 ## Definition of fursuit
 
 animal costume made out of faux [fur](./fur)

@@ -1,3 +1,6 @@
+---
+categories: [yiff]
+---
 ## Definition of yiffy
 
 being horny, aroused

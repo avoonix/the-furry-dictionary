@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of booper
 
 nose, snout

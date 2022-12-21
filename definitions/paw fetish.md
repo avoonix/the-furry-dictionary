@@ -1,3 +1,6 @@
+---
+categories: [yiff]
+---
 ## Definition of paw fetish
 
 the furry equivalent of a foot fetish

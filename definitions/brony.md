@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of brony
 
 a fan of _My Little Pony_

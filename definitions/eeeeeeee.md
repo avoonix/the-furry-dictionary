@@ -1,3 +1,6 @@
+---
+categories: [sounds]
+---
 ## Definition of eeeeeeee
 
 show of excitement

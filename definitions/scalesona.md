@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of scalesona
 
 a [sona](./sona) that has scales, like dragons or reptiles

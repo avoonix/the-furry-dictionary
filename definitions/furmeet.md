@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of furmeet
 
 small real-life gathering

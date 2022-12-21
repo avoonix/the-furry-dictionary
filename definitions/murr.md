@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of murr
 
 1. canine version of a cat's purr

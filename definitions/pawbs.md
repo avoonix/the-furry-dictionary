@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of pawbs
 
 the cute version of _paws_

@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of floof
 
 1. a very fluffy character

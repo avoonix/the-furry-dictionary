@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of furry
 
 1. a member of the furry fandom

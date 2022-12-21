@@ -1,3 +1,6 @@
+---
+categories: [yiff]
+---
 ## Definition of pawjob
 
 the furry equivalent of a footjob

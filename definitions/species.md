@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of species
 
 A classification of groups of animals

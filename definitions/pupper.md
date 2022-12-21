@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of pupper
 
 a puppy

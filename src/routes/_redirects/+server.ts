@@ -17,6 +17,7 @@ export const GET: RequestHandler = async () => {
     `
 /* /404.html 404
 /all /browse.html 301
+/category /browse.html 301
 ${pagesRedirects.join("\n")}
 ${lettersRedirects.join("\n")}
 `.trim(),

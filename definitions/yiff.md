@@ -1,3 +1,6 @@
+---
+categories: [yiff, sounds, artwork]
+---
 ## Definition of yiff
 
 1. furry porn, like artworks or videos

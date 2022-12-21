@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of babyfur
 
 a furry who roleplays as a baby/toddler character

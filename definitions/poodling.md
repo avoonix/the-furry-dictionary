@@ -1,3 +1,6 @@
+---
+categories: [fursuits]
+---
 ## Definition of poodling
 
 showing your human skin intentionally while fursuiting

@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of smol
 
 A small and cute character

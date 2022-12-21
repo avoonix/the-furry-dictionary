@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of feetsies
 
 cute version of _feet_

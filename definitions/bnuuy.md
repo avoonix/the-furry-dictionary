@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of bnuuy
 
 cute version of _bunny_

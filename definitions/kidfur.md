@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of kidfur
 
 a furry who roleplays as a child character

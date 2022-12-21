@@ -1,3 +1,6 @@
+---
+categories: [yiff]
+---
 ## Definition of yiffing
 
 having sex

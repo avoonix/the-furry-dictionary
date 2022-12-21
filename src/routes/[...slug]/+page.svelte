@@ -36,6 +36,7 @@
         frequency={data.definition.frequency}
         prev={data.definition.prev}
         next={data.definition.next}
+        categories={data.definition.categories}
       />
     </div>
   </article>

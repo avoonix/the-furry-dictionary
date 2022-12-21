@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of mate
 
 1. significant other

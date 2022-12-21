@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of feathery
 
 bird-like character, avian

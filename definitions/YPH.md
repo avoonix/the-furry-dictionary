@@ -1,3 +1,6 @@
+---
+categories: [abbreviations]
+---
 ## Definition of YPH
 
 your paw here

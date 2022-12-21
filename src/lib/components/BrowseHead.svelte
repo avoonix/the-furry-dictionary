@@ -37,4 +37,4 @@
 <svelte:head>
   {@html schema}
 </svelte:head>
-<Meta title={variables.siteName} {url} {description} />
+<Meta title={name} {url} {description} />

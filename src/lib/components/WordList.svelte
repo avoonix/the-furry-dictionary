@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Word } from "$lib/definitions";
+  import type { Definition } from "$lib/definitions";
   import DefinitionLink from "./DefinitionLink.svelte";
 
-  export let words: (Word | null)[];
+  export let words: ((Definition & {href?: string}) | null)[];
   export let inline = false;
 </script>
 
@@ -14,7 +14,7 @@
       class:opacity-0={!word}
       class:pointer-events-none={!word}
     >
-      <DefinitionLink slug={word?.slug} />
+      <DefinitionLink slug={word?.slug} href={word?.href} />
 
       {#if inline && idx !== words.length - 1}
         <div class="mx-2">&bull;</div>

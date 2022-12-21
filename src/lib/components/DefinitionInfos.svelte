@@ -1,18 +1,25 @@
 <script lang="ts">
+    import type { Definition } from "$lib/definitions";
   import UsageFrequency from "./UsageFrequency.svelte";
-  import type { Word } from "$lib/definitions";
   import WordList from "./WordList.svelte";
 
-  export let prev: Word[];
-  export let next: Word[];
+  export let prev: Definition[];
+  export let next: Definition[];
   export let frequency: number;
+  export let categories: string[];
 </script>
-
-<!-- <SectionHeader>Info</SectionHeader> -->
 
 <div class="grid md:grid-cols-[12em_1fr] text-xl">
   <div>Word Frequency</div>
   <div class="mb-10 md:mb-3"><UsageFrequency value={frequency} /></div>
+  {#if categories.length}
+  <div>Categories</div>
+  <div class="mb-10 md:mb-3">
+    <div class="flex flex-wrap">
+      <WordList words={categories.map(c => ({slug: c, href: `/category/${c}`}))} inline />
+    </div>
+  </div>
+  {/if}
   <div>Before (alphabetically)</div>
   <div class="mb-10 md:mb-3">
     <div class="flex flex-wrap">

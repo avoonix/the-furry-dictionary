@@ -1,3 +1,6 @@
+---
+categories: [species]
+---
 ## Definition of curl
 
 1. cute name for huskies

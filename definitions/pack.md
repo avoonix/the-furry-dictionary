@@ -1,3 +1,6 @@
+---
+categories: []
+---
 ## Definition of pack
 
 1. a group of furries
