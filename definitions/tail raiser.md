@@ -3,4 +3,4 @@ categories: [yiff]
 ---
 ## Definition of tail raiser
 
-a bottom
+another term for gay bottom
