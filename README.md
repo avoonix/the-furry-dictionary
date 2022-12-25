@@ -12,6 +12,7 @@ https://the-furry-dictionary.avoonix.com/
 - http://www.furrydolphin.net/furry-dict.html
 - https://web.archive.org/web/20210105191529/https://www.furcen.org/fgc/glossary.html
 - https://www.reddit.com/r/furry/comments/37tvx3/lets_make_a_glossary/
+- https://toyhou.se/~forums/11.general/91376.furry-language-is-weird
 - https://en.wikifur.com/
 - https://files.pushshift.io/reddit/comments/
 
