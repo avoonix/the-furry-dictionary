@@ -3,4 +3,4 @@ categories: []
 ---
 ## Definition of furfag
 
-an insult
+furry faggot

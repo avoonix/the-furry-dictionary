@@ -1,5 +1,5 @@
 ---
-categories: []
+categories: [fursuits]
 ---
 ## Definition of footpaw
 

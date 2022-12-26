@@ -3,7 +3,7 @@ categories: []
 ---
 ## Definition of bean
 
-singular: a cute character, that may also be [smol](./smol)
+singular: a cute lovable character
 
 plural:
 
