@@ -56,18 +56,14 @@ async function processLineByLine() {
 
   const sortedWords = Object.keys(termCounts).sort((a, b) => termCounts[b] - termCounts[a]);
 
-  // counts that will divide all observed terms more or less equally in 5 groups
-  const dividers = new Array(5)
-    .fill(null)
-    .map((_, idx) => termCounts[sortedWords[Math.floor(((idx + 1) / 5) * sortedWords.length) - 1]]);
+  const max = termCounts[sortedWords[0]];
 
-  const getPosition = (count) => 5 - dividers.findIndex((d) => d <= count);
+  const convertToScale = (num) => isFinite(num) ? Math.min(5, num + 2) : 1
 
   // term => score (1-5)
-  const result = Object.fromEntries(
-    sortedWords.map((word, idx) => [word, getPosition(termCounts[word])]),
-  );
+  const result = Object.fromEntries(sortedWords.map((word, idx) => [word, convertToScale(Math.floor((Math.log(termCounts[word])) / Math.log(max) * 4))]));
 
+  // term => count
   const debug = Object.fromEntries(sortedWords.map((word, idx) => [word, termCounts[word]]));
 
   await fs.promises.writeFile("stats/result.json", JSON.stringify(result, null, 2));
