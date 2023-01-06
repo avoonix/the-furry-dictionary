@@ -1,5 +1,5 @@
 ---
-categories: []
+categories: [affection]
 ---
 ## Definition of glomp
 

@@ -1,6 +1,6 @@
 ---
 categories: [yiff]
 ---
-## Definition of tailhole
+## Definition of murrhole
 
 butthole
