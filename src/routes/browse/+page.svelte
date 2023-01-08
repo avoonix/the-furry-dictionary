@@ -2,7 +2,7 @@
   import WordList from "$lib/components/WordList.svelte";
   import Header from "$lib/components/Header.svelte";
   import AllHead from "$lib/components/AllHead.svelte";
-  import { groupBy } from "lodash";
+  import groupBy from "lodash/groupBy";
   import UsageFrequency from "$lib/components/UsageFrequency.svelte";
 
   export let data: import("./$types").PageData;

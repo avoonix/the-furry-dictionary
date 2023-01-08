@@ -15,9 +15,14 @@ export const GET: RequestHandler = async () => {
 
   return new Response(
     `
-/* /404.html 404
+/* /index.html 404
 /all /browse.html 301
 /category /browse.html 301
+/category/abbreviation /category/abbreviations 301
+/category/emoticon /category/emoticons 301
+/category/sound /category/sounds 301
+/category/hybrid /category/hybrids 301
+/category/fursuit /category/fursuits 301
 ${pagesRedirects.join("\n")}
 ${lettersRedirects.join("\n")}
 `.trim(),
