@@ -1,6 +1,7 @@
 ---
 categories: [emoticons]
 ---
+
 ## Definition of UwU
 
 expression when someone is happy or saw something cute

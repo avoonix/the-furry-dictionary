@@ -1,6 +1,7 @@
 ---
 categories: [artwork, fursuits]
 ---
+
 ## Definition of commission
 
 to pay an artist to produce an artwork or fursuit, among other things

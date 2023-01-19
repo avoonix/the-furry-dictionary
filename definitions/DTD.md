@@ -1,6 +1,7 @@
 ---
 categories: [abbreviations, fursuits]
 ---
+
 ## Definition of DTD
 
 duct tape dummy

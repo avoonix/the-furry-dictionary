@@ -1,13 +1,9 @@
 <script lang="ts">
-  import BrowseByLetter from "$lib/components/BrowseByLetter.svelte";
-  import WordList from "$lib/components/WordList.svelte";
+  import CategoryHead from "$lib/components/CategoryHead.svelte";
   import Header from "$lib/components/Header.svelte";
-  import BrowseHead from "$lib/components/BrowseHead.svelte";
-    import CategoryHead from "$lib/components/CategoryHead.svelte";
+  import WordList from "$lib/components/WordList.svelte";
 
   export let data: import("./$types").PageData;
-
-  $: matching = data.all.filter((p) => p.categories.includes(data.category));
 </script>
 
 <CategoryHead category={data.category} />
@@ -22,5 +18,5 @@
     </span>
   </h1>
 
-  <WordList words={matching} />
+  <WordList words={data.matching} />
 </div>

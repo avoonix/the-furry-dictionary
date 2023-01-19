@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of littlefur
 
 another name for [kidfur](./kidfur)

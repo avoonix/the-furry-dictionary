@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of furspeech
 
 1. a constructed language used in the furry fandom

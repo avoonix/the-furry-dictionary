@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of furbait
 
 a character of a movie or show that

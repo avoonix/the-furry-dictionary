@@ -3,7 +3,7 @@
   import AllHead from "$lib/components/AllHead.svelte";
   import Search from "$lib/components/Search.svelte";
 
-  export let data: import('./$types').PageData;
+  export let data: import("./$types").PageData;
 </script>
 
 <AllHead />

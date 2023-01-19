@@ -4,7 +4,7 @@
   import { receive, send } from "$lib/crossfade";
   import SectionHeader from "$lib/components/SectionHeader.svelte";
   import IndexHead from "$lib/components/IndexHead.svelte";
-  export let data: import('./$types').PageData;
+  export let data: import("./$types").PageData;
 
   const description = `There are many abbreviations and slang terms in use in the furry fandom that everyone is expected to know, but many aren't that straightforward. This dictionary contains definitions for many of the most used ones and also more general internet vocabulary that is used frequently by furries.`;
 </script>

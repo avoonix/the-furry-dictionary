@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Definition } from "$lib/definitions";
+  import type { Definition } from "$lib/definitions";
   import WordList from "./WordList.svelte";
 
   export let all: Definition[];
@@ -13,7 +13,9 @@
         .filter((w) => w.slug.toLowerCase().includes(lower))
         .sort(({ slug: a }, { slug: b }) => a.indexOf(lower) - b.indexOf(lower))
     : [];
-  $: padded = [...new Array(7)].fill(null).map<Definition | null>((_, idx) => filtered[idx] || null); // limit to 7 results and pad the test with null
+  $: padded = [...new Array(7)]
+    .fill(null)
+    .map<Definition | null>((_, idx) => filtered[idx] || null); // limit to 7 results and pad the test with null
 </script>
 
 <div class="relative mt-4">

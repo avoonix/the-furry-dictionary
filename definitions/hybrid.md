@@ -1,6 +1,7 @@
 ---
 categories: [species, hybrids]
 ---
+
 ## Definition of hybrid
 
 a combination of multiple species

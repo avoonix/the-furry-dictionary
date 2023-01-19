@@ -9,7 +9,7 @@
   import SectionHeader from "$lib/components/SectionHeader.svelte";
   import { canonicalUrl } from "$lib/seo";
 
-  export let data: import('./$types').PageData;
+  export let data: import("./$types").PageData;
 
   let disableComments = browser
     ? localStorage.getItem("disableComments") === "true" || false
@@ -83,7 +83,14 @@
       the image should be crawled by search engines, but not shown/loaded for users
       just using loading="lazy" and display: none did not work
     -->
-    <a href={image} style="visibility: hidden; display: none;">Definition of {data.definition.slug}</a>
-    <img src={image} style="visibility: hidden; display: none;" alt={data.definition.preview.all} loading="lazy" />
+    <a href={image} style="visibility: hidden; display: none;"
+      >Definition of {data.definition.slug}</a
+    >
+    <img
+      src={image}
+      style="visibility: hidden; display: none;"
+      alt={data.definition.preview.all}
+      loading="lazy"
+    />
   </noscript>
 </div>

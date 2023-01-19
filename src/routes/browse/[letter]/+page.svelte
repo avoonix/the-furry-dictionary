@@ -4,7 +4,7 @@
   import Header from "$lib/components/Header.svelte";
   import BrowseHead from "$lib/components/BrowseHead.svelte";
 
-  export let data: import('./$types').PageData;
+  export let data: import("./$types").PageData;
 
   $: matching = data.all.filter((p) => p.slug.toLowerCase().startsWith(data.letter.toLowerCase()));
 </script>

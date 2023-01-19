@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of sona
 
 1. the character that represents someone in the [fandom](./furry%20fandom)

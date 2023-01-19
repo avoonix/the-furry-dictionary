@@ -1,6 +1,7 @@
 ---
 categories: [fursuits]
 ---
+
 ## Definition of digitigrade
 
 walking style where only the toes touch the ground

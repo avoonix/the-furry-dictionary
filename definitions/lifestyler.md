@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of lifestyler
 
 someone who displays their furriness in real life

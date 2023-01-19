@@ -2,7 +2,7 @@
   import type { Definition } from "$lib/definitions";
   import DefinitionLink from "./DefinitionLink.svelte";
 
-  export let words: ((Definition & {href?: string}) | null)[];
+  export let words: ((Definition & { href?: string }) | null)[];
   export let inline = false;
 </script>
 

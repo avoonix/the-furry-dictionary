@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of snoot
 
 nose, snout

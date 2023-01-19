@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of bean
 
 singular: a cute lovable character

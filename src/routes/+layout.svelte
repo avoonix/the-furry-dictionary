@@ -2,7 +2,7 @@
   import "../app.css";
   import Footer from "$lib/components/Footer.svelte";
   import { fade } from "svelte/transition";
-  export let data: import('./$types').PageData;
+  export let data: import("./$types").PageData;
 </script>
 
 {#key data.currentRoute}

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Definition } from "$lib/definitions";
+  import type { Definition } from "$lib/definitions";
   import UsageFrequency from "./UsageFrequency.svelte";
   import WordList from "./WordList.svelte";
 
@@ -13,12 +13,12 @@
   <div>Word Frequency</div>
   <div class="mb-10 md:mb-3"><UsageFrequency value={frequency} /></div>
   {#if categories.length}
-  <div>Categories</div>
-  <div class="mb-10 md:mb-3">
-    <div class="flex flex-wrap">
-      <WordList words={categories.map(c => ({slug: c, href: `/category/${c}`}))} inline />
+    <div>Categories</div>
+    <div class="mb-10 md:mb-3">
+      <div class="flex flex-wrap">
+        <WordList words={categories.map((c) => ({ slug: c, href: `/category/${c}` }))} inline />
+      </div>
     </div>
-  </div>
   {/if}
   <div>Before (alphabetically)</div>
   <div class="mb-10 md:mb-3">

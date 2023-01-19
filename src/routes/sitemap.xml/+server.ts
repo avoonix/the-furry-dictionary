@@ -45,9 +45,13 @@ export const GET: RequestHandler = async () => {
             </url>`,
           )
           .join("")}
-        ${Object.keys(Object.fromEntries(getPages()
-          .flatMap(p => p.categories)
-          .map(c => [c, true])))
+        ${Object.keys(
+          Object.fromEntries(
+            getPages()
+              .flatMap((p) => p.categories)
+              .map((c) => [c, true]),
+          ),
+        )
           .map(
             // https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
             (category) => `<url>

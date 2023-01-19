@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of beans
 
 paw pads

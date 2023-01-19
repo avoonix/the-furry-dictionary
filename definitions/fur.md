@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of fur
 
 1. shorthand for [furry](./furry)

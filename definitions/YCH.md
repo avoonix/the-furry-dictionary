@@ -1,6 +1,7 @@
 ---
 categories: [abbreviations, artwork]
 ---
+
 ## Definition of YCH
 
 your character here

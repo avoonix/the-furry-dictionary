@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of anthropomorphic
 
 animals with human characteristics, like walking upright

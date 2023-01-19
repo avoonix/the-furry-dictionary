@@ -1,6 +1,7 @@
 ---
 categories: []
 ---
+
 ## Definition of the goods
 
 the [pawbs](./pawbs) or [beans](./beans)

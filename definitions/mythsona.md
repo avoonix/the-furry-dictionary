@@ -1,6 +1,7 @@
 ---
 categories: [species, hybrids]
 ---
+
 ## Definition of mythsona
 
 a [sona](./sona) that resembles a mythical creature, like [chimera](./chimera), [gryphon](./gryphon), [hippogriff](./hippogriff)

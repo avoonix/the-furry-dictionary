@@ -8,7 +8,12 @@ import glob from "tiny-glob";
 
 async function getTerms() {
   const entries = await glob("definitions/**/*.md");
-  return entries.map((e) => e.replace(/\.md/, "").replace(/^definitions\//, "").toLowerCase());
+  return entries.map((e) =>
+    e
+      .replace(/\.md/, "")
+      .replace(/^definitions\//, "")
+      .toLowerCase(),
+  );
 }
 
 async function processLineByLine() {
@@ -58,10 +63,15 @@ async function processLineByLine() {
 
   const max = termCounts[sortedWords[0]];
 
-  const convertToScale = (num) => isFinite(num) ? Math.min(5, num + 2) : 1
+  const convertToScale = (num) => (isFinite(num) ? Math.min(5, num + 2) : 1);
 
   // term => score (1-5)
-  const result = Object.fromEntries(sortedWords.map((word, idx) => [word, convertToScale(Math.floor((Math.log(termCounts[word])) / Math.log(max) * 4))]));
+  const result = Object.fromEntries(
+    sortedWords.map((word, idx) => [
+      word,
+      convertToScale(Math.floor((Math.log(termCounts[word]) / Math.log(max)) * 4)),
+    ]),
+  );
 
   // term => count
   const debug = Object.fromEntries(sortedWords.map((word, idx) => [word, termCounts[word]]));

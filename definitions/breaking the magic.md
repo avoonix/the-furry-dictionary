@@ -1,6 +1,7 @@
 ---
 categories: [fursuits]
 ---
+
 ## Definition of breaking the magic
 
 1. talk in human voice or show skin while in suit

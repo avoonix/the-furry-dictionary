@@ -13,7 +13,7 @@ export interface Page extends Definition {
     text: string;
     all: string;
   };
-  categories: string[]
+  categories: string[];
 }
 
 export function getPages({ page = 1, limit = Infinity } = {}) {
@@ -28,7 +28,8 @@ const definitionToWord = (def: Definition): Definition => ({ slug: def.slug });
 
 const definitions: Page[] = Object.entries(import.meta.globEager("/definitions/**/*.md"))
   .map(([filepath, definition]) => {
-    if(!definition.metadata?.categories) throw new Error(`categories frontmatter missing for ${filepath}`)
+    if (!definition.metadata?.categories)
+      throw new Error(`categories frontmatter missing for ${filepath}`);
     return {
       ...definition.metadata,
       slug: filepath.replace(/(\/index)?\.md/, "").replace(/^\/definitions\//, ""),

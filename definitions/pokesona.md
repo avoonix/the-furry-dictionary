@@ -1,6 +1,7 @@
 ---
 categories: [species]
 ---
+
 ## Definition of pokesona
 
 a [sona](./sona) that is of a Pokemon species
