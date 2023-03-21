@@ -2,11 +2,10 @@
 categories: [species]
 ---
 
-## Definition of foxo
+## Definition of fops
 
 cute version of _fox_
 
 ## Related Terms
 
-- [fops](./fops)
-- [tail raiser](./tail%20raiser)
+- [foxo](./foxo)
