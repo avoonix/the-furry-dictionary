@@ -5,7 +5,12 @@ import type { RequestHandler } from "@sveltejs/kit";
 export const GET: RequestHandler = async () => {
   const pagesRedirects = getPages().flatMap((definition) => {
     const lower = definition.slug.toLowerCase();
-    return lower === definition.slug ? [] : [`/${lower} /${definition.slug} 301`];
+    return lower === definition.slug
+      ? []
+      : [
+          `/${encodeURIComponent(lower)} /${encodeURIComponent(definition.slug)} 301`,
+          `/${lower} /${definition.slug} 301`,
+        ];
   });
 
   const lettersRedirects = letters.flatMap((letter) => {
