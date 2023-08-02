@@ -15,6 +15,7 @@ https://the-furry-dictionary.avoonix.com/
 - https://toyhou.se/~forums/11.general/91376.furry-language-is-weird
 - https://en.wikifur.com/
 - https://files.pushshift.io/reddit/comments/
+- https://www.furry-explained.com/
 
 ## Developing
 
