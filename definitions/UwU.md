@@ -15,6 +15,7 @@ expression when someone is happy or saw something cute
 | Face      | Meaning            |
 | --------- | ------------------ |
 | UvU       | [birb](./birb) UwU |
+| U>U       | [birb](./birb) UwU |
 | (′ꈍωꈍ‵) | unicode UwU        |
 | (=UܫU=)∫  | unicode UwU        |
 

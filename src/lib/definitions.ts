@@ -42,15 +42,15 @@ const definitions: Page[] = Object.entries(import.meta.globEager("/definitions/*
       ? definition.customPreview
       : parsedHtml.querySelector("p") || parsedHtml.querySelector("li");
     const frequency = stats[definition.slug.toLowerCase()];
-    if (!frequency) throw new Error(`frequency missing for ${definition.slug}`);
+    if (!frequency) throw new Error(`frequency missing for "${definition.slug}" - did you run the "stats:generate" npm script?`);
     return {
       ...definition,
       prev: [],
       next: [],
       frequency,
       preview: {
-        text: preview.structuredText,
-        all: parsedHtml.structuredText,
+        text: preview?.structuredText,
+        all: parsedHtml?.structuredText,
       },
     };
   })

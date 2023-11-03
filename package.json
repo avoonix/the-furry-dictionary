@@ -11,8 +11,8 @@
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "postinstall": "node scripts/icons.js",
-    "stats:build": "node stats/filter.js",
-    "stats:generate": "node stats/stats.js"
+    "stats:preprocess": "node stats/preprocess.js",
+    "stats:generate": "node stats/generate.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",

@@ -8,4 +8,5 @@ someone who can [transform](./transformation) into another species
 
 ## Examples
 
-- Werewolf
+- [werewolf](./werewolf)
+- [werecat](./werecat)

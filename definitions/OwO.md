@@ -18,6 +18,8 @@ expression when someone finds something interesting or arousing
 | ÓwÒ  | sad                |
 | ÒwÓ  | angry              |
 | ^w^  | happy              |
+| @w@  | hypnotized         |
+| O>O  | [birb](./birb) OwO |
 
 ## Related Terms
 

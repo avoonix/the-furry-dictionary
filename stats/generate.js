@@ -18,7 +18,16 @@ async function getTerms() {
 
 async function processLineByLine() {
   const termCounts = {};
-  const fileStream = fs.createReadStream("stats/filtered.json");
+  const fileStream = fs.createReadStream("stats/preprocessed.json");
+  fileStream.on("error", (e) => {
+    if (e.code === "ENOENT") {
+      console.error("Run `stats:preprocess` first");
+      process.exit(1);
+    } else {
+      console.error(e);
+      process.exit(1);
+    }
+  });
   const terms = await getTerms();
 
   const termVariants = Object.fromEntries([
@@ -74,10 +83,10 @@ async function processLineByLine() {
   );
 
   // term => count
-  const debug = Object.fromEntries(sortedWords.map((word, idx) => [word, termCounts[word]]));
+  const rawCounts = Object.fromEntries(sortedWords.map((word, idx) => [word, termCounts[word]]));
 
   await fs.promises.writeFile("stats/result.json", JSON.stringify(result, null, 2));
-  await fs.promises.writeFile("stats/debug.json", JSON.stringify(debug, null, 2));
+  await fs.promises.writeFile("stats/rawCounts.json", JSON.stringify(rawCounts, null, 2));
 }
 
 processLineByLine();

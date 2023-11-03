@@ -3,6 +3,10 @@ import fs from "fs";
 import readline from "readline";
 import { spawn } from "child_process";
 
+const inputFile = `RC_2023-03.zst`
+
+console.log(`make sure to download the input file ${inputFile} (instructions in the README)`);
+
 // https://www.reddit.com/r/furry/wiki/related/, https://www.furaffinity.net/journal/5147231
 const allowedSubreddits = {
   anthro: true,
@@ -64,9 +68,13 @@ const allowedSubreddits = {
 };
 
 async function processLineByLine() {
-  const proc = spawn("zstdcat", ["stats/RC_2022-06.zst", "--long=31"]);
+  console.log("preprocessing...");
+  const proc = spawn("zstdcat", [`stats/${inputFile}`, "--long=31"]);
+  proc.stderr.on("data", (data) => {
+    console.error(`stderr: ${data}`);
+  });
   let linesRead = 0;
-  const writeStream = fs.createWriteStream("filtered.json");
+  const writeStream = fs.createWriteStream("stats/preprocessed.json");
 
   const rl = readline.createInterface({
     input: proc.stdout,
@@ -80,7 +88,7 @@ async function processLineByLine() {
     }
     const json = JSON.parse(line);
     const subreddit = json.subreddit;
-    if (!allowedSubreddits[subreddit]) continue;
+    if (!["furry", "yiff", "furs", "anthro"].includes(subreddit.toLowerCase()) && !allowedSubreddits[subreddit]) continue;
     const body = json.body.toLowerCase();
     writeStream.write(JSON.stringify({ body, subreddit }) + "\n");
   }
@@ -88,3 +96,4 @@ async function processLineByLine() {
 }
 
 processLineByLine();
+
