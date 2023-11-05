@@ -14,7 +14,7 @@
   // $: text = texts[value];
 </script>
 
-<div class="flex" title="Occurences in reddit comments (June 2022)">
+<div class="flex" title="Occurences in reddit comments (March 2023)">
   {#each Array(5) as _, idx}
     <div class="">
       <img
