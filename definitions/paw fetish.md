@@ -9,3 +9,5 @@ the furry equivalent of a foot fetish
 ## Related Terms
 
 - [pawjob](./pawjob)
+- [steppies](./steppies)
+

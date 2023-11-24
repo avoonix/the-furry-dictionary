@@ -4,4 +4,9 @@ categories: [species]
 
 ## Definition of cheese
 
-name given to [sergals](./sergal)
+alternative name for [sergals](./sergal)
+
+## Related Terms
+
+- [wedge](./wedge)
+
