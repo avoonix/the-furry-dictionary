@@ -1,5 +1,4 @@
 import { parse } from "node-html-parser";
-import stats from "/stats/result.json";
 
 export interface Definition {
   slug: string;
@@ -8,7 +7,6 @@ export interface Definition {
 export interface Page extends Definition {
   prev: Definition[];
   next: Definition[];
-  frequency: number;
   preview: {
     text: string;
     all: string;
@@ -41,13 +39,10 @@ const definitions: Page[] = Object.entries(import.meta.globEager("/definitions/*
     const preview = definition.customPreview
       ? definition.customPreview
       : parsedHtml.querySelector("p") || parsedHtml.querySelector("li");
-    const frequency = stats[definition.slug.toLowerCase()];
-    if (!frequency) throw new Error(`frequency missing for "${definition.slug}" - did you run the "stats:generate" npm script?`);
     return {
       ...definition,
       prev: [],
       next: [],
-      frequency,
       preview: {
         text: preview?.structuredText,
         all: parsedHtml?.structuredText,

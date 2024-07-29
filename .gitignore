@@ -6,10 +6,6 @@ node_modules
 .env.*
 !.env.example
 
-# stats
-stats/preprocessed.json
-stats/*.zst
-
 # generated
 static/favicon-*.png
 static/favicon.ico
